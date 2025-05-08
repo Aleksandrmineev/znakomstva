@@ -4,7 +4,7 @@
 :root {
   --general-text: #ffffff;
   --accent-text: #4bd879;
-  --general-bg: #000000;
+  --general-bg: #473d2a;
   --alternat-bg: #62666f;
 
   --color-dark: #1a1a1a;
@@ -28,8 +28,8 @@ html {
 body {
   margin: 0;
   font-family: var(--font-main);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--general-bg);
+  color: var(--general-text);
   overflow-x: hidden;
   line-height: 1.6;
 }
@@ -49,9 +49,14 @@ body {
 }
 
 .section {
-  padding: 60px 0;
+  padding: 10px 0;
 }
 
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--general-text);
+}
 /* ========================== */
 /*       Utility Classes      */
 /* ========================== */
@@ -93,7 +98,7 @@ body {
 /* ========================== */
 @media (max-width: 768px) {
   .section {
-    padding: 40px 0;
+    padding: 10px 0;
   }
 
   .container {
@@ -102,6 +107,15 @@ body {
 }
 
 /* ===============FORM======================= */
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;  /* по горизонтали */
+  align-items: center;      /* по вертикали */
+  /* min-height: 100vh;        на всю высоту экрана */
+  background: var(--general-bg);      /* просто чтобы было видно */
+}
+
 form {
   background: white;
   padding: 20px 30px;
