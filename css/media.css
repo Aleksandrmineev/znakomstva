@@ -509,7 +509,7 @@
 
     .testimonial {
         border-radius: 12px;
-        padding: 0px;
+        padding: 20px 12px;
         min-height: 100%;
     }
 
@@ -541,7 +541,7 @@
         /* Кавычку делаем вдвое меньше */
         font-size: 80px;
         /* вместо 160px */
-        top: -40px;
+        top: -50px;
         /* скорректировали позицию */
         left: 20px;
     }
