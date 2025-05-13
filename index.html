@@ -40,7 +40,9 @@
             <div class="container">
                 <div class="hero-flex">
                     <div class="hero__content">
+
                         <h1 class="hero__title">
+                            <div class="mobile-hidden" style="height: 140px;"></div>
                             <span class="hero__title-line hero__title-line--pink">
                                 Ты даже не представляешь,
                             </span>
@@ -50,10 +52,11 @@
                         </h1>
 
                         <p class="hero__subtitle">
-                            Ты – взрослый, уверенный, состоявшийся мужчина. Ты знаешь,
-                            <span class="hero__subtitle-strong">
-                                чего хочешь от жизни, от женщины, от себя.
+                            <span>
+                                Ты – взрослый, уверенный, состоявшийся мужчина. Ты знаешь,
+                                <strong>чего хочешь от жизни, от женщины, от себя.</strong>
                             </span>
+                            <div style="height: 20px;"></div>
                             <span class="mobile-hidden">
                                 А самое главное – есть женщины, которые ищут именно такого, как ты. Им не нужны
                                 несерьёзные
@@ -61,14 +64,19 @@
                                 ухаживать,
                                 ценит женщину и знает, как сделать её счастливой.
                             </span>
+                            <div style="height: 20px;"></div>
                         </p>
 
                         <a href="#" class="btn btn--primary">Зарегистрируйся бесплатно и начни общение!</a>
                         <p class="hero__login">Уже есть аккаунт?<a href="#">Войти</a></p>
                     </div>
-                    <div class="hero__image">
-                        <img src="img/content/group82.webp" srcset="img/content/milena-mobile.webp 768w"
-                            sizes="(max-width: 768px) 100vw, 50vw" alt="Милена, 31" class="hero__img" />
+                    <div class="hero__image-desktop">
+                        <img src="img/content/group82.webp" alt="Милена, 31" class="hero__img" />
+                    </div>
+
+                    <!-- Показывается только на мобильных -->
+                    <div class="hero__image-mobile">
+                        <img src="img/content/milena-mobile.webp" alt="Милена, 31" class="hero__img" />
                     </div>
                 </div>
             </div>
@@ -313,6 +321,7 @@
                         <p class="choice-card__text">Зрелые мужчины – это уверенность, понимание, вкус. Они не
                             торопятся, не суетятся, и это сводит с ума.</p>
                     </div>
+                    <div class="choice-card__divider"></div>
                 </div>
 
                 <p class="women-choice__subtitle">Думаешь, молодые женщины не хотят тебя? Давай проверим?</p>

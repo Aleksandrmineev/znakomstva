@@ -5,7 +5,17 @@
 }
 
 @media (max-width: 1199px) {
-
+    .header {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10; /* чтобы перекрывал другие блоки */
+        background: transparent; /* или нужный цвет, если хочешь полупрозрачность */
+      }
+      .mobile-hidden {
+        display: none;
+      }
 
     .btn--cta::after,
     .btn--primary::after {
@@ -35,6 +45,14 @@
         z-index: 0;
     }
 
+    .hero__image-desktop {
+        display: none;
+    }
+
+    .hero__image-mobile {
+        display: block;
+    }
+
     .promo__title {
         margin-top: 40px;
     }
@@ -47,6 +65,10 @@
     .chat--blue-1,
     .chat--blue-3 {
         transform: translateX(0px);
+    }
+
+    .chat--blue-3::before {
+        content: url('../img/icon/icon9.webp');
     }
 
     .hero-flex {
@@ -221,10 +243,6 @@
         color: var(--title-black);
     }
 
-    .mobile-hidden {
-        display: none;
-    }
-
     /* Подзаголовок (общий) */
     .hero__subtitle {
         font-family: 'Golos Text', sans-serif;
@@ -333,6 +351,11 @@
         max-width: 100%;
         padding: 20px 0 0px 0;
     }
+    .why__photo {
+        width: auto;
+        border-radius: var(--radius);
+        flex-shrink: 0;
+    }
 
     .why__title {
         margin-bottom: 40px;
@@ -340,6 +363,7 @@
 
     .why__item {
         flex-direction: column-reverse;
+        gap: 10px;
     }
 
     .chat__bold {
@@ -355,6 +379,7 @@
     .chat--light-4 {
         padding: 12px;
         margin-right: 30px;
+        margin-bottom: 0;
         border-top-left-radius: 0;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
@@ -395,6 +420,7 @@
     .chat--light-2::before,
     .chat--light-3::before,
     .chat--light-4::before {
+        top: -25px;
         width: 40px;
         height: 40px;
     }
@@ -405,10 +431,14 @@
     .chat--blue-4::before {
         width: 60px;
         height: 60px;
+        bottom: -20px;
+    }
+    .chat--blue-2::before {
+        transform: rotate(340deg);
     }
 
     .why__call {
-        margin-bottom: 0px;
+        margin-bottom: 24px;
         font-size: 20px;
     }
 
@@ -555,8 +585,7 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        max-width: 1150px;
-        margin: 0 auto 60px;
+        max-width: 100%;
     }
 
     .choice-card {
@@ -714,6 +743,7 @@
     }
 
     .security__item-title {
+        font-size: var(--fs-h3);
         margin-top: 0;
         margin-bottom: 10px;
     }

@@ -196,7 +196,7 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    margin-top: 7.5em;
+    margin: 40px 0;
     position: relative;
 }
 
@@ -383,7 +383,7 @@
     flex-direction: column;
     gap: 7.5em;
     max-width: 1150px;
-    margin: 0 auto 60px;
+    margin: 0 auto 0px;
 }
 
 .choice-card {
@@ -439,13 +439,13 @@
 .choice-card__divider {
     height: 2px;
     background-color: #e0e6f8; /* как на скриншоте */
-    margin: 32px 0; /* отступ сверху и снизу */
+    margin: 40px 0 0 0;
   }
 
 .women-choice__subtitle {
-    margin-top: 2.7em;
+    max-width: 1000px;
     font-size: 2.5em;
-    margin-bottom: 1em;
+    margin: 40px auto;
 }
 
 .btn--cta {
@@ -625,6 +625,7 @@
     flex-direction: column;
     flex: 1 1 350px;
     max-width: 410px;
+    color: #FFE8DB;
 }
 
 .security__icon {
@@ -643,7 +644,7 @@
 .security__item-text {
     font-size: 1.5rem;
     color: #fff;
-    line-height: 1.5;
+    line-height: 1.6;
     margin-bottom: 10px;
 }
 
