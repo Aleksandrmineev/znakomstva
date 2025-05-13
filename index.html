@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="SiteDescription">
-    <title>Отправка инпутов форм в Телеграм</title>
+    <title>Знакомства</title>
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -13,7 +13,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text&display=swap" rel="stylesheet">
+
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/fonts.css">
@@ -24,67 +25,541 @@
 
 <body>
     <div class="wrapper">
-        <header class="section header">
+        <header class="header section">
             <div class="container">
-                <div class="header__inner">
-                    <h1>MVP отправка инпутов в телеграм</h1>
+                <div style="height: 20px;"></div>
+                <div class="hero__top-bar">
+                    <img src="/img/icon/logo1.webp" alt="logo" class="hero__logo">
+                    <a href="#" class="hero__login-link">Войти</a>
                 </div>
             </div>
         </header>
 
-        <div class="container">
-            <span>
-                Это минимальный пример формы (54кб), отправляющей данные в Telegram и Google Таблицу через Make. Всё работает
-                на чистом JavaScript — без фреймворков.<br><br>
-                Попробуйте отправить сообщение — вы получите подтверждение в Telegram, а данные отобразятся в <a
-                    href="https://docs.google.com/spreadsheets/d/120l-xc_XvpiJbinrAtY9_vvQSaWsecUj2HWZBvNdhpQ/edit?usp=sharing"
-                    target="_blank" rel="noopener noreferrer">этой таблице</a>.<br><br>
-                Можно подключить любые формы с любыми полями — заявки будут мгновенно поступать в таблицу и Telegram.
-            </span>
-        </div>
-
-
-        <main>
-            <section class="section hero">
-                <div class="container">
-                    <div class="hero__inner">
-                        <!-- main block -->
-                    </div>
-                </div>
-            </section>
-
-            <section class="section features">
-                <div class="container">
-                    <div class="features__inner">
-                        <!-- features -->
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <div class="form-wrapper">
-            <form id="form">
-                <input type="text" name="name" placeholder="Имя" required><br>
-                <input type="tel" name="phone" placeholder="Телефон" required><br>
-                <input type="email" name="email" placeholder="Емэйл" required><br>
-                <textarea name="message" placeholder="Сообщение" required></textarea><br>
-                <button type="submit">Отправить</button>
-            </form>
-
-            <div id="formSuccess" style="display: none;">
-                Успешная отправка
-            </div>
-        </div>
-        <footer class="section footer">
+        <!-- Hero Section -->
+        <section class="hero section">
             <div class="container">
-                <div class="footer__inner">
-                    <!-- footer -->
+                <div class="hero-flex">
+                    <div class="hero__content">
+                        <h1 class="hero__title">
+                            <span class="hero__title-line hero__title-line--pink">
+                                Ты даже не представляешь,
+                            </span>
+                            <span class="hero__title-line hero__title-line--black">
+                                сколько молодых женщин ищут такого, как ты!
+                            </span>
+                        </h1>
+
+                        <p class="hero__subtitle">
+                            Ты – взрослый, уверенный, состоявшийся мужчина. Ты знаешь,
+                            <span class="hero__subtitle-strong">
+                                чего хочешь от жизни, от женщины, от себя.
+                            </span>
+                            <span class="mobile-hidden">
+                                А самое главное – есть женщины, которые ищут именно такого, как ты. Им не нужны
+                                несерьёзные
+                                мальчики, пустые разговоры и бесконечные игры. Они хотят мужчину, который умеет
+                                ухаживать,
+                                ценит женщину и знает, как сделать её счастливой.
+                            </span>
+                        </p>
+
+                        <a href="#" class="btn btn--primary">Зарегистрируйся бесплатно и начни общение!</a>
+                        <p class="hero__login">Уже есть аккаунт?<a href="#">Войти</a></p>
+                    </div>
+                    <div class="hero__image">
+                        <img src="/img/content/Group82.webp" srcset="/img/content/milena-mobile.webp 768w"
+                            sizes="(max-width: 768px) 100vw, 50vw" alt="Милена, 31" class="hero__img" />
+                    </div>
                 </div>
+            </div>
+
+        </section>
+
+        <!-- Promo Section (pink background) -->
+        <section class="promo section">
+            <div class="container">
+                <div class="promo__wrapper">
+                    <div class="promo__image">
+                        <img src="/img/content/Layer0.webp" alt="Улыбающаяся девушка">
+                    </div>
+
+                    <div class="promo__content">
+                        <h2 class="promo__title">
+                            После 40 (и даже 55!) говорят,<br>
+                            что флирт уже не тот? Глупости!
+                        </h2>
+
+                        <ul class="promo__reasons">
+                            <li class="reason reason--bad">
+                                <span class="reason__icon">🚫</span>
+                                Молодые? Они сами не понимают, чего хотят.
+                            </li>
+                            <li class="reason reason--bad">
+                                <span class="reason__icon">🚫</span>
+                                Обычные знакомства? Только разочарование.
+                            </li>
+                            <li class="reason reason--good">
+                                ✅ А что же у нас? Молодые женщины, которые ценят опытных мужчин и ждут твоего внимания.
+                            </li>
+                        </ul>
+
+                        <p class="promo__text">
+                            Ты не мальчишка, но именно это – твой главный плюс. Ты знаешь, как говорить так, чтобы
+                            хотелось слушать, как касаться так, чтобы хотелось ещё. Ты – мужчина, а это значит, что
+                            именно ты привлекаешь женщин, которым нужен кто-то настоящий.<br>
+                            <strong>Хочешь проверить, насколько ты интересен молодым женщинам?</strong>
+                        </p>
+
+                        <a href="#" class="btn btn--primary">Зарегистрируйся бесплатно и начни общение!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Men Choose Us -->
+        <section class="why section">
+            <div class="container">
+                <h2 class="why__title">Почему мужчины выбирают нас?</h2>
+
+                <div class="why__grid">
+                    <!-- Карточка 1 (фото справа) -->
+                    <div class="why__item">
+                        <div class="why__chat">
+                            <div class="chat chat--light-1">
+                                <p class="chat__bold">После 40 (и даже 55!) кажется, <br>
+                                    что всё стало однообразным?</p>
+                                <p>Женщины вокруг либо не вызывают эмоций, <br>либо создают проблемы.</p>
+                            </div>
+
+                            <div class="chat chat--blue-1">
+                                <p>А здесь – девушки, которые ждут мужчину, способного их завести.</p>
+                            </div>
+                        </div>
+                        <img src="/img/content/girl1.webp" alt="Женщина 1" class="why__photo">
+                    </div>
+                    <!-- Карточка 2 (фото слева) -->
+                    <div class="why__item why__item--reverse">
+                        <div class="why__chat">
+                            <div class="chat chat--light-2">
+                                <p class="chat__bold">Жена перестала замечать?</p>
+                                <p>Женщины на нашем сайте посмотрят на тебя иначе. Ты работал, строил семью, был
+                                    надёжным, но когда последний раз ты чувствовал, что тобой восхищаются?</p>
+                            </div>
+
+                            <div class="chat chat--blue-2">
+                                <p>Здесь тебя заметят – и ты это почувствуешь.</p>
+                            </div>
+                        </div>
+                        <img src="/img/content/girl2.webp" alt="Женщина 1" class="why__photo">
+                    </div>
+                    <!-- Карточка 3 (фото справа) -->
+                    <div class="why__item">
+                        <div class="why__chat">
+                            <div class="chat chat--light-3">
+                                <p class="chat__bold">День за днём одно и то же?</p>
+                                <p>Работа, дом, сериалы, новости, пустые вечера.</p>
+                            </div>
+
+                            <div class="chat chat--blue-3">
+                                <p>А что, если завтра тебя разбудит сообщение: "Доброе утро, мой мужчина..."</p>
+                            </div>
+                        </div>
+
+                        <img src="/img/content/girl3.webp" alt="Женщина 1" class="why__photo">
+                    </div>
+                    <!-- Карточка 4 (фото слева) -->
+                    <div class="why__item why__item--reverse">
+                        <div class="why__chat">
+                            <div class="chat chat--light-4">
+                                <p class="chat__bold">Друзья говорят: <br>
+                                    "В твоём возрасте уже поздно"?</p>
+                                <p> Кто им это сказал?</p>
+                            </div>
+
+                            <div class="chat chat--blue-4">
+                                <p> Да, ты не мальчик, но именно это делает тебя желанным.</p>
+                            </div>
+                        </div>
+                        <img src="/img/content/girl4.webp" alt="Женщина 1" class="why__photo">
+                    </div>
+                </div>
+
+                <div class="why__footer">
+                    <p class="why__call">Дай себе шанс снова почувствовать азарт общения.</p>
+                    <a href="#" class="btn btn--primary btn--with-arrow">
+                        Создай профиль бесплатно и начни флиртовать!
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials: Что говорят мужчины -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="testimonials__title">Что говорят мужчины</h2>
+
+                <div class="testimonials__grid">
+                    <div class="testimonial testimonial--quote">
+                        <p>Я не думал, что молодые женщины действительно любят зрелых мужчин. Теперь каждое утро
+                            начинается с её сообщений.</p>
+                        <div class="testimonial__person">
+                            <img src="/img/content/men1.webp" alt="Игорь" class="testimonial__photo">
+                            <div>
+                                <strong>Игорь, 48 лет</strong><br>
+                                <span>водитель</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <p>Я просто хотел посмотреть как тут, а теперь каждую ночь переписываюсь с девушкой, которая
+                            кайфует от моих комплиментов.</p>
+                        <div class="testimonial__person">
+                            <img src="/img/content/men2.webp" alt="Сергей" class="testimonial__photo">
+                            <div>
+                                <strong>Сергей, 54 года</strong><br>
+                                <span>электромонтажник</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <p>Я не был готов к серьёзному общению, просто хотел флирта. Но познакомился с девушкой, которая
+                            по-настоящему меня зацепила.</p>
+                        <div class="testimonial__person">
+                            <img src="/img/content/men3.webp" alt="Виктор" class="testimonial__photo">
+                            <div>
+                                <strong>Виктор, 57 лет</strong><br>
+                                <span>строитель</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <p>Теперь я точно знаю, что молодые женщины выбирают не только молодых парней с татуировками, но
+                            зрелых мужчин, которые знают, чего хотят.</p>
+                        <div class="testimonial__person">
+                            <img src="/img/content/men4.webp" alt="Александр" class="testimonial__photo">
+                            <div>
+                                <strong>Александр, 59 лет</strong><br>
+                                <span>механик</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="testimonials__subtitle">Хочешь почувствовать то же самое?</p>
+                <a href="#" class="btn btn--cta">
+                    Создай профиль бесплатно и начни знакомиться!
+                </a>
+            </div>
+        </section>
+
+        <!-- Why Young Women Choose Experienced Men -->
+        <section class="women-choice">
+            <div class="container">
+                <div class="women-choice__heading-row">
+                    <h2 class="women-choice__title-pink">Почему молодые женщины</h2>
+                    <h3 class="women-choice__title-black">выбирают опытных мужчин?</h3>
+                </div>
+                <div class="women-choice__mobile">
+                    <h2 class="women-choice__title-pink">
+                        Почему молодые женщины&nbsp;<span class="women-choice__title-black">выбирают опытных
+                            мужчин?</span>
+                    </h2>
+                </div>
+
+                <div class="women-choice__list">
+                    <div class="choice-card">
+                        <div class="choice-card__photo" style="background-image: url('/img/content/g1.webp');">
+                            <div class="choice-card__info">
+                                <strong>Аня, 31 год</strong><br>
+                                <span>бухгалтер</span>
+                            </div>
+                        </div>
+                        <p class="choice-card__text">С ровесниками – пустые разговоры, никаких эмоций. Взрослый мужчина
+                            – это другое: он понимает, чего хочет женщина.</p>
+                    </div>
+                    <div class="choice-card__divider"></div>
+                    <div class="choice-card">
+                        <div class="choice-card__photo" style="background-image: url('/img/content/g2.webp');">
+                            <div class="choice-card__info">
+                                <strong>Валя, 29 лет</strong><br>
+                                <span>медсестра</span>
+                            </div>
+                        </div>
+                        <p class="choice-card__text">Мне не нужен парень, который думает, что комплимент – это лайк в
+                            инсте. Я люблю, когда мужчина умеет словами разогреть интерес.</p>
+                    </div>
+                    <div class="choice-card__divider"></div>
+                    <div class="choice-card">
+                        <div class="choice-card__photo" style="background-image: url('/img/content/g3.webp');">
+                            <div class="choice-card__info">
+                                <strong>Марина, 38 лет</strong><br>
+                                <span>флорист</span>
+                            </div>
+                        </div>
+                        <p class="choice-card__text">С таким мужчиной интереснее. Он не играет в молчанку, не пропадает,
+                            зато умеет держать беседу и вовлекать в очень интимные разговоры.</p>
+                    </div>
+                    <div class="choice-card__divider"></div>
+                    <div class="choice-card">
+                        <div class="choice-card__photo" style="background-image: url('/img/content/g4.webp');">
+                            <div class="choice-card__info">
+                                <strong>Виктория, 26 лет</strong><br>
+                                <span>парикмахер</span>
+                            </div>
+                        </div>
+                        <p class="choice-card__text">Зрелые мужчины – это уверенность, понимание, вкус. Они не
+                            торопятся, не суетятся, и это сводит с ума.</p>
+                    </div>
+                </div>
+
+                <p class="women-choice__subtitle">Думаешь, молодые женщины не хотят тебя? Давай проверим?</p>
+
+                <a href="#" class="btn btn--cta">
+                    Зарегистрируйся бесплатно и начни знакомиться!
+                </a>
+            </div>
+        </section>
+
+        <!-- Features: Что тебя ждёт на сайте -->
+        <section class="features">
+            <div class="container">
+                <div class="features__inner">
+                    <h2 class="features__title">Что тебя ждёт на сайте?</h2>
+                    <p class="features__subtitle">
+                        В отличие от безликих приложений,<br>
+                        где всё держится на случайности, здесь всё по- <br> настоящему:
+                    </p>
+
+                    <div class="features__grid">
+                        <div class="feature">
+                            <img src="/img/icon/pic1.webp" alt="" class="feature__icon">
+                            <h3 class="feature__title">Выбирай, кто нравится</h3>
+                            <p class="feature__text">листай анкеты, ставь лайки, и, возможно, симпатия окажется
+                                взаимной.</p>
+                        </div>
+                        <div class="feature">
+                            <img src="/img/icon/pic2.webp" alt="" class="feature__icon">
+                            <h3 class="feature__title">Общайся без ограничений</h3>
+                            <p class="feature__text">пиши первым, начинай разговор, а дальше всё пойдёт само собой.</p>
+                        </div>
+                        <div class="feature">
+                            <img src="/img/icon/pic3.webp" alt="" class="feature__icon">
+                            <h3 class="feature__title">Делись фото</h3>
+                            <p class="feature__text">добавляй интригу, разогревай интерес, флиртуй без лишних вопросов.
+                            </p>
+                        </div>
+                        <div class="feature">
+                            <img src="/img/icon/pic4.webp" alt="" class="feature__icon">
+                            <h3 class="feature__title">Первое сообщение бесплатно</h3>
+                            <p class="feature__text">не нужно платить, чтобы попробовать! Напиши любой женщине на сайте
+                                и посмотри, как она отреагирует.</p>
+                        </div>
+                        <div class="feature">
+                            <img src="/img/icon/pic5.webp" alt="" class="feature__icon">
+                            <h3 class="feature__title">Мгновенные ответы</h3>
+                            <p class="feature__text">никакого "онлайн был 3 часа назад". Здесь отвечают здесь и сейчас.
+                            </p>
+                        </div>
+                        <div class="feature">
+                            <img src="/img/icon/pic6.webp" alt="" class="feature__icon">
+                            <h3 class="feature__title">Реальные анкеты</h3>
+                            <p class="feature__text">никакого обмана, только настоящие женщины, которым интересен ты.
+                            </p>
+                        </div>
+                        <div class="feature">
+                            <img src="/img/icon/pic7.webp" alt="" class="feature__icon">
+                            <h3 class="feature__title">Красивые фото, <br>настоящие эмоции</h3>
+                            <p class="feature__text">все анкеты проверяются вручную, здесь не место для фейков.</p>
+                        </div>
+                        <div class="feature">
+                            <img src="/img/icon/pic8.webp" alt="" class="feature__icon">
+                            <h3 class="feature__title">Высокий рейтинг <br>на сайтах обзоров</h3>
+                            <p class="feature__text">тысячи мужчин уже нашли здесь то, чего так не хватало.</p>
+                        </div>
+                    </div>
+
+                    <p class="features__strong">
+                        Без пустых чатов. Без молчания. Без разочарований. Только живые знакомства, приятное общение и
+                        настоящий флирт.
+                    </p>
+                    <p class="features__note">
+                        Ты всегда заботился о других — теперь пора, чтобы позаботились о тебе.
+                    </p>
+
+                    <a href="#" class="btn btn--cta">Зарегистрируйся бесплатно и начни знакомиться!</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Benefits (black background) -->
+        <section class="security">
+            <div class="container">
+                <div class="security__inner">
+                    <h2 class="security__title">
+                        Здесь комфортно, безопасно<br>и конфиденциально
+                    </h2>
+                    <p class="security__subtitle">
+                        Мы знаем, насколько важно, чтобы ты чувствовал себя <br>
+                        <span class="highlight">уверенно и спокойно</span>.
+                    </p>
+
+                    <div class="security__features">
+                        <div class="security__item">
+                            <img src="/img/icon/Benefits1.webp" alt="" class="security__icon">
+                            <h3 class="security__item-title">Только реальные анкеты</h3>
+                            <p class="security__item-text">здесь только реальные женщины, которые действительно хотят
+                                флиртовать.</p>
+                        </div>
+
+                        <div class="security__item">
+                            <img src="/img/icon/Benefits2.webp" alt="" class="security__icon">
+                            <h3 class="security__item-title">Живая модерация 24/7</h3>
+                            <p class="security__item-text">никаких подстав и фейков, каждая анкета проверена живым
+                                человеком.</p>
+                        </div>
+
+                        <div class="security__item">
+                            <img src="/img/icon/Benefits3.webp" alt="" class="security__icon">
+                            <h3 class="security__item-title">Полная конфиденциальность</h3>
+                            <p class="security__item-text">никто не узнает, что ты здесь, если только ты сам об этом не
+                                расскажешь.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Invitation -->
+        <section class="cta-invitation section">
+            <div class="container">
+                <div class="cta-invitation__inner">
+                    <div class="cta-invitation__image">
+                        <img src="/img/content/girg-wer.webp" alt="Девушка">
+                    </div>
+                    <div class="cta-invitation__content">
+                        <h2 class="cta-invitation__title">Готов узнать,<br>кто тобой интересуется?</h2>
+                        <a href="#" class="btn btn--cta btn--no-arrow">Присоединяйся бесплатно<br>и начни
+                            флиртовать!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stories: Истории мужчин -->
+        <section class="stories section">
+            <div class="container">
+                <div class="stories__inner">
+                    <h2 class="stories__title">Истории мужчин, которые снова почувствовали себя желанными</h2>
+
+                    <div class="stories__grid">
+                        <!-- Первая карточка с кавычкой -->
+                        <div class="story-card story-card--quote">
+                            <p>Я думал, что всё позади, что осталось только работа и телевизор. Теперь у меня есть
+                                женщина, которая ждет моих сообщений с нетерпением. Я снова в деле.</p>
+                            <div class="story-card__person">
+                                <img src="/img/content/storymen1.webp" alt="Олег" class="story-card__photo">
+                                <div>
+                                    <strong>Олег, 57 лет</strong><br>
+                                    <span>предприниматель</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Остальные карточки -->
+                        <div class="story-card">
+                            <p>После развода я уже ни на что не надеялся. Сейчас у меня переписка с девушкой, которая
+                                младше меня на 30 лет. Даже не верится!</p>
+                            <div class="story-card__person">
+                                <img src="/img/content/storymen2.webp" alt="Александр" class="story-card__photo">
+                                <div>
+                                    <strong>Александр, 61 год</strong><br>
+                                    <span>инженер</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="story-card">
+                            <p>Я не верил, что молодым женщинам могут нравиться взрослые мужчины. Но в первую же неделю
+                                получил пять сообщений. Теперь знаю точно – мы им интересны!</p>
+                            <div class="story-card__person">
+                                <img src="/img/content/storymen3.webp" alt="Виктор" class="story-card__photo">
+                                <div>
+                                    <strong>Виктор, 56 лет</strong><br>
+                                    <span>врач</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="story-card">
+                            <p>Друг уговорил меня зарегистрироваться, и я не пожалел. Теперь каждую ночь я общаюсь с
+                                женщиной, которая делает мои вечера тёплыми.</p>
+                            <div class="story-card__person">
+                                <img src="/img/content/storymen4.webp" alt="Борис" class="story-card__photo">
+                                <div>
+                                    <strong>Борис, 50 лет</strong><br>
+                                    <span>водитель</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="story-card">
+                            <p>Раньше мой день заканчивался телевизором. Теперь он заканчивается нежными сообщениями от
+                                женщины, которая заставляет меня улыбаться.
+                            </p>
+                            <div class="story-card__person">
+                                <img src="/img/content/storymen5.webp" alt="Игорь" class="story-card__photo">
+                                <div>
+                                    <strong>Игорь, 52 года</strong><br>
+                                    <span>ветеринар</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Последняя карточка — просто фото -->
+                        <div class="stories__image-only">
+                            <img src="/img/content/storygirl.webp" alt="Девушка">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA (red/pink background) -->
+        <section class="final-cta section">
+            <div class="container">
+                <div class="final-cta__inner">
+                    <div class="final-cta__image">
+                        <img src="/img/content/Finalgirl.webp" alt="Девушка">
+                    </div>
+                    <div class="final-cta__content">
+                        <h2 class="final-cta__title">Что дальше?</h2>
+                        <p class="final-cta__text">
+                            Можно продолжать ждать чуда, а можно
+                            просто посмотреть, кто ждёт тебя уже сейчас.
+                        </p>
+                        <p class="final-cta__text final-cta__text--bold">
+                            Создай профиль бесплатно и узнай,<br>
+                            кто хочет с тобой познакомиться!
+                        </p>
+                        <a href="#" class="btn btn--cta btn--no-arrow btn--final">Присоединяйся бесплатно<br>и начни
+                            общение.</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer section">
+            <div class="container">
+                <div style="height: 100px;"></div>
             </div>
         </footer>
-
     </div>
-    <script src="js/main.js"></script>
+
 </body>
 
 </html>

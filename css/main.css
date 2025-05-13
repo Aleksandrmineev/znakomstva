@@ -1,0 +1,875 @@
+/* ============================== Блок чатов ============================== */
+
+.why {
+    margin-top: 4em;
+}
+
+.why__title {
+    margin-bottom: 1.5em;
+}
+
+.why__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 100px;
+}
+
+.why__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.why__item--reverse {
+    flex-direction: row-reverse;
+}
+
+/* Фото */
+.why__photo {
+    width: auto;
+    border-radius: var(--radius);
+    flex-shrink: 0;
+}
+
+/* Чат поверх, позиционируем в блоке */
+/* Блок чата */
+.why__chat {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    max-width: 700px;
+}
+
+
+/* Светлый (вопрос) 1 */
+.chat--light-1,
+.chat--light-3 {
+    background: #E6EFFF;
+    padding: 30px 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+
+    color: var(--general-text);
+    margin-bottom: 2em;
+    position: relative;
+}
+
+.chat--light-2,
+.chat--light-4 {
+    background: #E6EFFF;
+    padding: 30px 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+
+    color: var(--general-text);
+    margin-bottom: 2em;
+    margin-left: 0;
+    transform: translateX(-80px);
+    z-index: 2;
+    position: relative;
+}
+
+.chat__bold {
+    font-size: var(--fs-chat-bold);
+    font-weight: var(--fw-semibold);
+    margin-bottom: 6px;
+    max-width: 645px;
+}
+
+.chat--light-1 p,
+.chat--light-2 p,
+.chat--light-3 p,
+.chat--light-4 p {
+    font-size: var(--fs-chat-light);
+    margin-bottom: 6px;
+    max-width: 645px;
+}
+
+.chat--blue-1,
+.chat--blue-3 {
+    background: #189BE4;
+    padding: 30px;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 2em;
+    color: #fff;
+    margin-left: auto;
+    transform: translateX(80px);
+    z-index: 2;
+    position: relative;
+}
+
+.chat--blue-2,
+.chat--blue-4 {
+    background: #189BE4;
+    padding: 30px;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 2em;
+    color: #fff;
+
+}
+
+.chat--blue-1 p,
+.chat--blue-2 p,
+.chat--blue-3 p,
+.chat--blue-4 p {
+    font-size: var(--fs-chat-light);
+    margin-bottom: 6px;
+    max-width: 645px;
+    color: #fff;
+}
+
+.chat--light-1::before,
+.chat--light-2::before,
+.chat--light-3::before,
+.chat--light-4::before {
+    content: "";
+  position: absolute;
+  top: -20px;
+  left: 1em;
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.chat--light-1::before {
+    background-image: url('../img/icon/icon1.webp');
+}
+
+.chat--light-2::before {
+    background-image: url('../img/icon/icon3.webp');
+}
+
+.chat--light-3::before {
+    background-image: url('../img/icon/icon5.webp');
+}
+
+.chat--light-4::before {
+    background-image: url('../img/icon/icon7.webp');
+}
+
+.chat--blue-1::before,
+.chat--blue-2::before,
+.chat--blue-3::before,
+.chat--blue-4::before {
+    position: absolute;
+    bottom: -10px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+}
+
+.chat--blue-1::before {
+    content: url('../img/icon/icon2.webp');
+}
+
+.chat--blue-2::before {
+    content: url('../img/icon/icon4.webp');
+}
+
+.chat--blue-3::before {
+    content: url('../img/icon/icon6.webp');
+}
+
+.chat--blue-4::before {
+    content: url('../img/icon/icon8.webp');
+}
+
+
+/* Нижний текст + кнопка */
+.why__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 7.5em;
+    position: relative;
+}
+
+.why__call {
+    margin-bottom: 1.8em;
+    font-size: 2.5rem;
+}
+
+.btn--with-arrow {
+    font-size: 2.5em;
+    padding: 25px 10px;
+    max-width: 1036px;
+    width: 100%;
+    line-height: 1;
+}
+
+.why__footer .btn--with-arrow::after {
+    content: url('../img/decor/Vector3.webp');
+    position: absolute;
+    display: inline-block;
+    margin-left: 12px;
+    top: 80px;
+    left: -10px;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+/* ============================== Блок Что говорят мужчины ============================== */
+
+.testimonials {
+    background-color: #E6EFFF;
+    padding: 80px 20px;
+    text-align: center;
+    margin-top: 6.5em;
+}
+
+.testimonials__title {
+    font-size: var(--fs-h2);
+    font-weight: 700;
+    text-align: left;
+    max-width: 1200px;
+    margin-left: -0.5em;
+    margin-right: auto;
+    margin-bottom: 2em;
+}
+
+.testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 3.5em;
+    max-width: 1250px;
+    margin: 0 auto 50px;
+}
+
+.testimonial {
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #E6EFFF;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+    position: relative;
+    text-align: left;
+    color: #000;
+}
+
+.testimonial--quote::before {
+    content: '❞';
+    font-size: 160px;
+    color: #189BE4;
+    position: absolute;
+    top: -95px;
+    left: 40px;
+    z-index: 1;
+}
+
+.testimonial p {
+    padding-top: 1.7em;
+    padding-right: 0.4em;
+    padding-left: 0.9em;
+    padding-bottom: 1em;
+    font-size: 1.7em;
+    margin-bottom: 20px;
+    text-align: left;
+    line-height: 1.7;
+}
+
+.testimonial__person {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+    padding-left: 1em;
+    padding-bottom: 1.3em;
+}
+
+.testimonial__photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial__person strong {
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.testimonial__person span {
+    font-weight: 400;
+    font-size: 1.8em;
+}
+
+.testimonials__subtitle {
+    font-size: 2.5em;
+    line-height: 2.5;
+    margin-bottom: 1em;
+}
+
+.btn--cta {
+    display: inline-block;
+    background: #00B778;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    font-size: 2.5rem;
+    position: relative;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn--cta:hover {
+    background: #00a85c;
+}
+
+.btn--cta::after {
+    content: url(../img/decor/Vector4.webp);
+    position: absolute;
+    top: -50px;
+    right: -100px;
+    width: 40px;
+    height: 40px;
+}
+
+
+/* ========================= Секция: почему молодые женщины ========================== */
+
+
+.women-choice {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.women-choice__mobile {
+    display: none;
+}
+
+.women-choice__title-pink {
+    color: #e6007e;
+    font-size: var(--fs-h2);
+    font-weight: 700;
+    text-align: left;
+    max-width: 1200px;
+    margin-left: -0.5em;
+    margin-right: auto;
+}
+
+.women-choice__title-black {
+    color: #000;
+    font-size: var(--fs-h2);
+    font-weight: 700;
+    text-align: left;
+    max-width: 1200px;
+    margin-left: 1.5em;
+    margin-right: auto;
+    margin-bottom: 1.5em;
+}
+
+.women-choice__list {
+    display: flex;
+    flex-direction: column;
+    gap: 7.5em;
+    max-width: 1150px;
+    margin: 0 auto 60px;
+}
+
+.choice-card {
+    display: flex;
+    gap: 4em;
+    align-items: stretch;
+    text-align: left;
+}
+
+.choice-card__photo {
+    flex: 0 0 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.choice-card__info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 1.25em;
+    line-height: 1.3;
+}
+
+.choice-card__info strong {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.choice-card__info strong::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 8px;
+    top: 0px;
+    right: -15px;
+    background-color: #6DC40F;
+    border-radius: 50%;
+}
+
+.choice-card__text {
+    flex: 1;
+    font-size: 1.75rem;
+    align-self: center;
+}
+
+.choice-card__divider {
+    height: 2px;
+    background-color: #e0e6f8; /* как на скриншоте */
+    margin: 32px 0; /* отступ сверху и снизу */
+  }
+
+.women-choice__subtitle {
+    margin-top: 2.7em;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+.btn--cta {
+    display: inline-block;
+    background: #00B778;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    position: relative;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn--cta:hover {
+    background: #00a85c;
+}
+
+.btn--cta::after {
+    content: url(../img/decor/Vector4.webp);
+    position: absolute;
+    top: -50px;
+    right: -100px;
+    width: 40px;
+    height: 40px;
+}
+
+/* =============================== Секция Что тебя ждет =============================== */
+
+.features {
+    background: radial-gradient(circle at 700% 50%,
+            /* центр градиента далеко справа и в центре */
+            #ffffff 0%,
+            /* белый в самом центре */
+            #ffffff 60%,
+            /* белый размазан до 60% */
+            #FFAEAE 100%
+            /* основной цвет — розовый, покрывает остальное */
+        );
+    padding: 80px 0px;
+}
+
+.features__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.features__title {
+    margin-bottom: 20px;
+    color: #000;
+    font-size: var(--fs-h2);
+    font-weight: 700;
+    text-align: left;
+    max-width: 1200px;
+    margin-left: -2em;
+    margin-right: auto;
+}
+
+.features__subtitle {
+    margin-top: 2em;
+    font-size: 2.25em;
+    text-align: left;
+    margin-bottom: 60px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.features__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.feature {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px 25px;
+    text-align: left;
+}
+
+.feature__icon {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 20px;
+}
+
+.feature__title {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #252525;
+}
+
+.feature__text {
+    font-size: 1.75em;
+    color: #252525;
+    line-height: 1.5;
+}
+
+.features__strong {
+    font-size: 2em;
+    font-weight: 700;
+    color: #252525;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.features__note {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #252525;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ============================= Секция Конфиденциальность ============================= */
+
+.security {
+    background: #252525;
+    padding: 80px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.security__inner {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.security__title {
+    color: #fff;
+    font-size: 3.4em;
+    font-weight: 700;
+    text-align: left;
+    max-width: 1200px;
+    margin-left: -2em;
+    margin-right: auto;
+    margin-top: 0.5em;
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+
+.security__subtitle {
+    font-size: 1.75em;
+    color: #fff;
+    margin-right: 0em;
+    margin-bottom: 3em;
+    text-align: left;
+    margin-right: 2em;
+}
+
+.security__subtitle .highlight {
+    color: #FFAEAE;
+    font-weight: 500;
+}
+
+.security__features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    text-align: center;
+}
+
+.security__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1 1 350px;
+    max-width: 410px;
+}
+
+.security__icon {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 20px;
+}
+
+.security__item-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-top: 1em;
+    margin-bottom: 10px;
+}
+
+.security__item-text {
+    font-size: 1.5rem;
+    color: #fff;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+
+/* =========================== Секция Кто интересуется ========================== */
+
+.cta-invitation {
+    background: linear-gradient(to right, #ffd9d9, #ffecec);
+}
+
+.cta-invitation__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.cta-invitation__image {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+    max-width: 610px;
+    width: 100%;
+}
+
+.cta-invitation__image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cta-invitation__content {
+    flex: 1 1 45%;
+    text-align: left;
+}
+
+.cta-invitation__title {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #222;
+    padding-left: 0em;
+    margin-bottom: 40px;
+    line-height: 1.3;
+}
+
+.btn--cta.btn--no-arrow::after {
+    display: none;
+}
+
+/* ========================== Секция Истории мужчин ========================== */
+
+.stories {
+    padding: 80px 20px 60px 20px;
+}
+
+.stories__inner {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.stories__title {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #111;
+    text-align: left;
+    padding-left: 0;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.stories__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 40px;
+    margin-bottom: 5em;
+}
+
+.story-card {
+    background: #E6EFFF;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    color: #000;
+}
+
+.story-card p {
+    padding-top: 1.7em;
+    padding-right: 0.4em;
+    padding-left: 0.9em;
+    padding-bottom: 1em;
+    font-size: 1.7em;
+    /* margin-bottom: 20px; */
+    text-align: left;
+    line-height: 1.65;
+}
+
+.story-card--quote::before {
+    content: '❞';
+    font-size: 160px;
+    color: #189BE4;
+    position: absolute;
+    top: -95px;
+    left: 40px;
+    z-index: 1;
+}
+
+.story-card__person {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.story-card__photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.story-card__person strong {
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.story-card__person span {
+    font-size: 1.8em;
+}
+
+.stories__image-only {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.stories__image-only img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+}
+
+/* =============================== Секция Final CTA =============================== */
+
+.final-cta {
+    background: linear-gradient(to right, #ffbaba, #ffd9d9);
+    margin-bottom: 100px;
+}
+
+.final-cta__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-top: 40px;
+}
+
+.final-cta__image {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+    max-width: 610px;
+    width: 100%;
+}
+
+.final-cta__image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.final-cta__content {
+    flex: 1 1 45%;
+    text-align: left;
+}
+
+.final-cta__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #222;
+    padding-left: 0;
+    margin-bottom: 40px;
+    line-height: 1.3;
+}
+
+.final-cta__text {
+    font-size: 2em;
+    color: #252525;
+    margin-bottom: 1.5em;
+    line-height: 1.6;
+}
+
+.final-cta__text--bold {
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 3em;
+}
+
+.btn--final {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 2.5em;
+    line-height: 1.3;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(255, 51, 102, 0.3);
+    max-width: 620px;
+    width: 100%;
+}
+
+/* Повторное использование */
+.btn--cta.btn--no-arrow::after {
+    display: none;
+}

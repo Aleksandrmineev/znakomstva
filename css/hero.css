@@ -1,0 +1,280 @@
+  /* ========================== */
+  /*       Hero Section        */
+  /* ========================== */
+  .hero-flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px 0;
+  }
+
+  .hero__content {
+      flex: 1 1 800px;
+      max-width: 100%;
+      padding: 0px 0 0 40px;
+  }
+
+  .hero__top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: clamp(20px, 5vw, 150px);
+    margin-bottom: 20px;
+  }
+  
+  .hero__logo {
+    max-width: 300px;
+    width: 100%;
+    max-height: 100px;
+    height: 100%;
+  }
+  
+  .hero__login-link {
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--accent-color);
+  /* Кнопка "Войти" в правом верхнем углу */
+
+    /* top: 2.5em;
+    right: 2em; */
+    font-size: 1.4rem;
+    font-weight: var(--fw-medium);
+    color: var(--color-dark);
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 4px 24px;
+    border-radius: var(--radius);
+    transition: var(--transition-fast);
+    border: 1px solid var(--color-dark);
+}
+
+  /* Обёртка заголовка */
+  .hero__title {
+      margin-bottom: 24px;
+      line-height: var(--lh-tight);
+  }
+
+  /* Одна «строка» заголовка */
+  .hero__title-line {
+      display: block;
+      font-size: var(--fs-h1);
+  }
+
+  /* Первая строка — розовым */
+  .hero__title-line--pink {
+      font-family: 'Golos Text', sans-serif;
+      font-weight: 700;
+      /* Bold */
+      font-size: 2rem;
+      /* 32px */
+      line-height: 1.8;
+      /* 130% от 2rem = 2.6rem */
+      letter-spacing: 0;
+      /* 0% */
+      color: var(--accent-pink);
+  }
+
+  /* Чёрная вторая строка заголовка */
+  .hero__title-line--black {
+      font-family: 'Golos Text', sans-serif;
+      font-weight: 700;
+      /* Bold */
+      font-size: 3.1rem;
+      /* 48px */
+      line-height: 1.1;
+      /* 110% от 3rem = 3.3rem */
+      letter-spacing: -0.05em;
+      /* -4% */
+      color: var(--title-black);
+  }
+
+  /* Подзаголовок (общий) */
+  .hero__subtitle {
+      font-family: 'Golos Text', sans-serif;
+      font-weight: 400;
+      /* Regular */
+      font-size: 1.6em;
+      /* 24px */
+      line-height: 1.4;
+      /* 150% от 1.5rem = 2.25rem */
+      letter-spacing: 0;
+      /* 0% */
+      color: var(--general-text);
+      margin-bottom: 40px;
+  }
+
+  /* Выделенная жирная часть в подзаголовке */
+  .hero__subtitle-strong {
+      display: block;
+      /* на новой строке */
+      font-weight: 600;
+      /* Semibold */
+      margin-top: 12px;
+      /* отступ сверху */
+  }
+
+  .btn--primary {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: var(--accent-green);
+      color: var(--secondary-text);
+      padding: 20px 40px;
+      border-radius: 0.3em;
+      text-decoration: none;
+      transition: var(--transition-fast);
+      width: 100%;
+      font-size: var(--fs-h3);
+  }
+
+  .btn--primary:hover {
+      opacity: 0.8;
+  }
+
+  .hero__login {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      font-size: var(--fs-h4);
+      gap: 20px;
+  }
+
+  .hero__login a {
+      color: #AD2462;
+      text-decoration: none;
+  }
+
+  .hero__image img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      max-width: 100%;
+  }
+
+  .hero__image {
+      flex: 1 1 610px;
+      max-width: 100%;
+  }
+
+  .hero__img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: auto;
+  }
+
+  .hero__login-link:hover {
+      background: rgba(255, 255, 255, 1);
+  }
+
+
+
+  /* ================================= Section Promo ====================================== */
+  .promo {
+      background-color: var(--secondary-bg);
+  }
+
+  .promo__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 60px;
+  }
+
+  .promo__image {
+      flex: 0 1 670px;
+      /* ширина: 670, может уменьшаться */
+      max-width: 100%;
+      padding: 80px 0 0px 0;
+  }
+
+  .promo__image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: var(--radius);
+  }
+
+  .promo__content {
+      flex: 0 1 760px;
+      /* ширина: 760, может уменьшаться */
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+  }
+
+  .promo__title {
+      font-family: 'Golos Text', sans-serif;
+      font-size: var(--fs-h3);
+      font-weight: var(--fw-bold);
+      line-height: 1.4;
+      color: var(--title-black);
+      margin-bottom: 0.8em;
+  }
+
+  .promo__reasons {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+  }
+
+  .reason {
+      padding: 5px 5px;
+      border-radius: var(--radius);
+      font-size: var(--fs-h4);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .reason--bad {
+      background-color: #fff;
+      color: #333;
+      border: 1px solid #ccc;
+      border-radius: 50px;
+      max-width: 520px;
+      width: 100%;
+  }
+
+  .reason--bad:first-child {
+      transform: rotate(-2deg) translateY(6px);
+      /* наклон + смещение вниз */
+  }
+
+  .reason--good {
+      background-color: #c7f7b4;
+      color: #0a4700;
+      border: 1px solid #ccc;
+      border-radius: 50px;
+      max-width: 550px;
+      width: 100%;
+      margin-bottom: 1.5em;
+  }
+
+  .promo__text {
+      font-size: var(--fs-h4);
+      line-height: 1.6;
+      color: #252525;
+  }
+
+  .promo__text strong {
+      display: block;
+      margin-top: 12px;
+      margin-bottom: 40px;
+      font-weight: var(--fw-bold);
+      color: var(--title-black);
+      font-size: var(--fs-h3);
+  }
+
+  .promo__content .btn--primary {
+    max-width: 480px;
+    width: 100%;
+  }
