@@ -6,6 +6,7 @@
 
 @media (max-width: 1199px) {
 
+
     .btn--cta::after,
     .btn--primary::after {
         display: none;
@@ -20,6 +21,12 @@
         /* внутренние отступы */
     }
 
+    .btn--cta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .container {
         max-width: 100%;
         margin: 0 auto;
@@ -28,6 +35,9 @@
         z-index: 0;
     }
 
+    .promo__title {
+        margin-top: 40px;
+    }
     .chat--light-2,
     .chat--light-4 {
         transform: translateX(0px);
@@ -137,6 +147,17 @@
         margin-bottom: 1em;
         max-width: 100%;
         width: 100%;
+    }
+
+    .final-cta__inner {
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding-top: 40px;
     }
 
 }

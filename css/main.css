@@ -166,7 +166,7 @@
 .chat--blue-3::before,
 .chat--blue-4::before {
     position: absolute;
-    bottom: -10px;
+    bottom: -45px;
     right: 30px;
     width: 80px;
     height: 80px;
