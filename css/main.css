@@ -381,7 +381,7 @@
 .women-choice__list {
     display: flex;
     flex-direction: column;
-    gap: 7.5em;
+    gap: 40px;
     max-width: 1150px;
     margin: 0 auto 0px;
 }
@@ -439,13 +439,13 @@
 .choice-card__divider {
     height: 2px;
     background-color: #e0e6f8; /* как на скриншоте */
-    margin: 40px 0 0 0;
+    margin: 20px 0;
   }
 
 .women-choice__subtitle {
     max-width: 1000px;
     font-size: 2.5em;
-    margin: 40px auto;
+    margin: 20px auto 40px;
 }
 
 .btn--cta {
